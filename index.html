@@ -253,5 +253,73 @@ lightbox.addEventListener('click', () => {
 
 </script>
 
+<script>
+
+  // 우클릭 방지
+  document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+  });
+
+  // 드래그 방지
+  document.addEventListener('dragstart', function(e) {
+    e.preventDefault();
+  });
+
+  // 이미지 저장 단축키 일부 방지
+  document.addEventListener('keydown', function(e) {
+
+    // Ctrl+S
+    if (e.ctrlKey && e.key === 's') {
+      e.preventDefault();
+    }
+
+    // Ctrl+U (소스보기)
+    if (e.ctrlKey && e.key === 'u') {
+      e.preventDefault();
+    }
+
+    // F12 개발자도구
+    if (e.key === 'F12') {
+      e.preventDefault();
+    }
+
+  });
+
+</script>
+
+ <script>
+
+  // 우클릭 방지
+  document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+  });
+
+  // 드래그 방지
+  document.addEventListener('dragstart', function(e) {
+    e.preventDefault();
+  });
+
+  // 이미지 저장 단축키 일부 방지
+  document.addEventListener('keydown', function(e) {
+
+    // Ctrl+S
+    if (e.ctrlKey && e.key === 's') {
+      e.preventDefault();
+    }
+
+    // Ctrl+U (소스보기)
+    if (e.ctrlKey && e.key === 'u') {
+      e.preventDefault();
+    }
+
+    // F12 개발자도구
+    if (e.key === 'F12') {
+      e.preventDefault();
+    }
+
+  });
+
+</script>
+
 </body>
 </html>
