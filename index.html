@@ -9,6 +9,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&display=swap" rel="stylesheet">
 
+<!-- 🌟 [추가] Font Awesome 아이콘 라이브러리 연결 -->
+<link rel="stylesheet" href="https://cloudflare.com">
+
 <style>
 
 *{
@@ -125,6 +128,34 @@ footer{
     font-size:14px;
 }
 
+/* 🌟 [추가] 이메일 링크 및 인스타그램 아이콘 스타일 정의 */
+footer p {
+    margin-bottom: 12px;
+}
+
+footer a {
+    color: #666;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #fff; /* 마우스 올리면 하얗게 강조 */
+}
+
+.instagram-icon {
+    display: inline-block;
+    font-size: 26px;      /* 아이콘 크기 */
+    margin-top: 15px;     /* 위쪽 간격 */
+    color: #666;          /* 사이트 톤에 맞춰 회색으로 설정 */
+    transition: transform 0.3s, color 0.3s;
+}
+
+.instagram-icon:hover {
+    color: #fff;          /* 마우스 올리면 하얗게 강조 */
+    transform: scale(1.1); /* 마우스 올리면 살짝 커지는 효과 */
+}
+
 .lightbox{
     position:fixed;
     inset:0;
@@ -183,6 +214,26 @@ footer{
 
 }
 
+/* 인스타그램 링크 전체 정렬 */
+.instagram-link {
+    display: inline-flex;      /* 이미지와 글자를 가로로 나란히 */
+    align-items: center;       /* 이미지와 글자의 세로 중앙 위치를 완벽히 일치 */
+    justify-content: center;
+    color: #8c8c8c;            
+    text-decoration: none;     
+    font-size: 24px;           /* 글자 크기 */
+}
+
+/* 인스타그램 JPG 이미지 크기 대폭 축소 */
+.instagram-img {
+    width: 24px;               /* 텍스트 높이(24px)에 맞춰 크기를 줄였습니다 */
+    height: 24px;              /* 가로 세로 정비율 유지 */
+    margin-right: 8px;         /* 아이콘과 우측 텍스트 사이의 간격 */
+    object-fit: contain;       /* 이미지 왜곡 방지 */
+    display: inline-block;     
+}
+
+
 </style>
 </head>
 
@@ -228,6 +279,16 @@ footer{
             lighteller@naver.com
         </a>
     </p>
+    <!-- 🌟 [추가] 인스타그램 아이콘 링크 (아이디 부분을 수정하세요) -->
+    <!-- 🌟 인스타그램 아이콘 링크 -->
+<!-- 🌟 인스타그램 아이콘 링크 -->
+<a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="instagram-link">
+    <!-- 아이콘 JPG 이미지 삽입 (파일명과 경로를 본인 환경에 맞게 수정하세요) -->
+    <img src="instagram_icon.png" alt="Instagram" class="instagram-img">
+    <span class="instagram-id">hyunsoo.photography</span>
+</a>
+
+
 </footer>
 
 <div class="lightbox" id="lightbox">
@@ -254,40 +315,6 @@ lightbox.addEventListener('click', () => {
 </script>
 
 <script>
-
-  // 우클릭 방지
-  document.addEventListener('contextmenu', function(e) {
-    e.preventDefault();
-  });
-
-  // 드래그 방지
-  document.addEventListener('dragstart', function(e) {
-    e.preventDefault();
-  });
-
-  // 이미지 저장 단축키 일부 방지
-  document.addEventListener('keydown', function(e) {
-
-    // Ctrl+S
-    if (e.ctrlKey && e.key === 's') {
-      e.preventDefault();
-    }
-
-    // Ctrl+U (소스보기)
-    if (e.ctrlKey && e.key === 'u') {
-      e.preventDefault();
-    }
-
-    // F12 개발자도구
-    if (e.key === 'F12') {
-      e.preventDefault();
-    }
-
-  });
-
-</script>
-
- <script>
 
   // 우클릭 방지
   document.addEventListener('contextmenu', function(e) {
